@@ -6,6 +6,8 @@
   "author": "Justin Rahardjo <justindra91@gmail.com>",
   "license": "MIT",
   "private": false,
+  "preferGlobal": true,
+  "bin": "./index.js",
   "dependencies": {
     "commander": "^2.15.1",
     "github-api": "^3.0.0",
