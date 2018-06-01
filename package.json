@@ -1,0 +1,13 @@
+{
+  "name": "rn-sender",
+  "version": "0.0.1",
+  "description": "A tool to get Github Release notes and send it to slack",
+  "main": "index.js",
+  "author": "Justin Rahardjo <justindra91@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "commander": "^2.15.1",
+    "github-api": "^3.0.0"
+  }
+}
