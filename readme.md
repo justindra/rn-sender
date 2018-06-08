@@ -11,5 +11,5 @@ npm install -g git+https://git@github.com/justindra/rn-sender.git
 ## Usage
 
 ```
-rn-sender l [username] [reponame] [pretext] -s [slack-webhook-url] -t [personal-access-token]
+rn-sender l [username] [reponame] [pretext] -t [personal-access-token] -s [slack-webhook-url] -a [microsoft-teams-webhook-url]
 ```
