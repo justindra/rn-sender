@@ -18,7 +18,7 @@ exports.generateFields = function(raw) {
   return fields;
 };
 
-exports.generatePaylod = function(data) {
+exports.generatePayload = function(data) {
   const fields = exports.generateFields(data.body);
   return {
     "attachments": [
