@@ -36,3 +36,32 @@ exports.generatePayload = function(data) {
     ]
   };
 };
+
+exports.generateCircleCIPayload = function(data) {
+  return {
+    "attachments": [
+      {
+        "fallback": data.title,
+        "pretext": data.pretext,
+        "color": data.color || "#36a64f",
+        "title": data.title || '',
+        "title_link": data.url,
+        "text": data.body,
+        "fields": [
+          {
+            "title": "Project",
+            "value": data.projectName,
+            "short": true
+          },
+          {
+            "title": "Branch",
+            "value": data.branch,
+            "short": true
+          }
+        ],
+        "footer": data.username,
+        "footer_icon": data.useravatar
+      }
+    ]
+  };
+};

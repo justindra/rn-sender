@@ -33,3 +33,23 @@ exports.generatePayload = function generatePayload(data) {
     }]
   };
 };
+
+exports.generateCircleCIPayload = function(data) {
+  return {
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "themeColor": data.color || "36a64f",
+    "summary": data.title || '',
+    "sections": [{
+        "activityTitle": data.title && `[${data.title}](${data.url})` || '',
+        "activitySubtitle": data.body || data.pretext || null,
+        "activityImage": data.useravatar || null,
+        "facts": [
+          { name: 'Project', value: data.projectName },
+          { name: 'Branch',  value: data.branch },
+          { name: 'Author',  value: data.username },
+        ],
+        "markdown": true
+    }]
+  };
+};
